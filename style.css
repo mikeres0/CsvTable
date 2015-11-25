@@ -1,0 +1,15 @@
+.container {
+	margin-top: 25px !important;
+}
+
+.btn {
+	margin-top: 10px;
+}
+
+hr {
+	border-top: 5px solid rgba(0,0,0,0.3) !important;
+}
+
+.alert {
+	display: none;
+}
