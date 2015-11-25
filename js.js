@@ -45,6 +45,7 @@ function createTable() {
 
 		    document.getElementsByClassName('csv')[0].value = '';
 		    $('tr:nth-child(1)').addClass('header');
+		    showHtml();
 		} else {
 			alert('To create a table please enter CSV data.')
 		}
@@ -61,10 +62,13 @@ function removeTable(){
 	}
 }
 
-function copyTable(){
+function showHtml(){
 	if ($('table').length > 0) {
 		var table = $('table').parent().html();
 		var tableString = table.replace('class="table"','');
+		var tableString2 = tableString.replace('class="header"','');
+
+		$('.csv').val(tableString2)
 
 	} else {
 		alert('To copy a table one must exist.')
@@ -81,4 +85,9 @@ function toggleCss(){
 		$(table).addClass('table')
 		$(table).find('tr:nth-child(1)').addClass('header')
 	}
+}
+
+
+function clearBox(){
+	$('.csv').val('')
 }
