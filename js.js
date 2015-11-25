@@ -44,18 +44,13 @@ function createTable() {
 }
 
 function removeTable(){
-	$('.table').remove();
+	if ($('.table').length > 0) {
+		$('.table').remove();
+	} else {
+		alert('To remove a table one must exist.')
+	}
 }
 
-function downloadCsv(){
-	var csv = $('.table').table2CSV({delivery:'value'});
-	var csvContent = "data:application/csv;charset=utf-8,"
-	csvContent += csv;
-	var encodedUri = encodeURI(csvContent)
-	window.open(encodedUri)
-}
-
-function makeEditable(){
-	$('.table').find('tr:first').css('background-color','rgba(51,122,183,1').css('color','rgba(255,255,255,1)').css('pointer-events','none')
-	$('.table').editableTableWidget();
+function copyTable(){
+	alert('Copy table')
 }
