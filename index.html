@@ -23,17 +23,14 @@
 	<div class="container">
 		<h1>CsvTable <small>Create HTML tables from CSV data</small></h1>
 		<div class="form-group">
-			<textarea id="csv" placeholder="Paste CSV content here" style="width: 450px; height: 150px;" class="form-control"></textarea>
+			<textarea placeholder="Paste CSV content here" style="width: 450px; height: 150px;" class="form-control csv"></textarea>
 			<div class="btn-group">
 				<button class="btn btn-success" onclick="createTable()">Create table</button>
 				<button class="btn btn-primary" onclick="copyTable()">Copy table HTML</button>
 				<button class="btn btn-danger" onclick="removeTable()">Remove table</button>
+				<button class="btn btn-warning" onclick="toggleCss()">Toggle CSS</button>
 			</div>
 			<hr>
-		</div>
-		<div class="alert alert-info">
-		    <a href="#" class="close" data-dismiss="alert">&times;</a>
-		    <strong>Info!</strong> Click on the table cells to edit them.
 		</div>
 	</div>
 </body>
